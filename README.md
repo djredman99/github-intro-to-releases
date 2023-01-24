@@ -4,3 +4,4 @@ A repo to help demonstrate the use of releases and creating/updating from workfl
 Releases:
 - v0.0 - pre-release
 - v0.1 - release
+- v0.1.1 - pre-release
