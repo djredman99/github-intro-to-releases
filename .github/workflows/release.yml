@@ -43,8 +43,8 @@ jobs:
             const { owner, repo } = context.repo;
             const release_id = context.payload.release.id;
             const { Octokit } = require("@octokit/rest");
-            const fetch = require("node-fetch");
-            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN, request: { fetch } });
+            const fetchImpl = require("node-fetch");
+            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN, request: { fetch: fetchImpl } });
             const { data: release } = await octokit.repos.getRelease({ owner, repo, release_id });
             const body = release.body + "\n\nAdd your new content here.";
             await octokit.repos.updateRelease({ owner, repo, release_id, body });
