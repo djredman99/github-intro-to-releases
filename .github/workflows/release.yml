@@ -66,6 +66,10 @@ jobs:
           mkdir release-assets
           echo "This is a test file." > release-assets/test.txt
           zip -r release-assets.zip release-assets
+          ls
+          cd release-assets
+          ls
+          cd ..
       
       - name: Upload Release Assets
         uses: actions/upload-release-asset@v1
