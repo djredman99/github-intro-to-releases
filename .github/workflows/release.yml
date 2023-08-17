@@ -61,7 +61,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               release_id: context.payload.release.id,
-              body: context.payload.release.body + "\n\n" + data
+              body: context.payload.release.body + "\n\n" + data.body
             })
 
       - name: Build Release Assests
