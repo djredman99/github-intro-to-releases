@@ -41,7 +41,7 @@ jobs:
           script: |
             console.log(context.payload.release.id)
             console.log(context.repo)
-            github.rest.releases.updateRelease({
+            github.rest.repos.updateRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
               release_id: context.payload.release.id,
