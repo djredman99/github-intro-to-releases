@@ -68,6 +68,7 @@ jobs:
           zip -r release-assets.zip release-assets
           ls
           cd release-assets
+          echo "Next LS"
           ls
           cd ..
       
