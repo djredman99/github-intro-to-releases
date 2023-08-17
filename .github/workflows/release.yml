@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
-            require = require("esm")(module);
+            require = require("esm")(module, { commonjs: true });
             const { owner, repo } = context.repo;
             const release_id = context.payload.release.id;
             const { Octokit } = require("@octokit/rest");
