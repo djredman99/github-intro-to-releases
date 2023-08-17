@@ -34,7 +34,7 @@ jobs:
           npm install @octokit/rest esm node-fetch
 
       - name: Edit Release
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
