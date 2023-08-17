@@ -42,7 +42,7 @@ jobs:
             const { owner, repo } = context.repo;
             const release_id = context.payload.release.id;
             const { GitHub: GitHubAPI } = require("@actions/github");
-            const github = new GitHubAPI(process.env.GITHUB_TOKEN);
-            const { data: release } = await github.repos.getRelease({ owner, repo, release_id });
+            const gh = new GitHubAPI(process.env.GITHUB_TOKEN);
+            const { data: release } = await gh.repos.getRelease({ owner, repo, release_id });
             const body = release.body + "\n\nAdd your new content here.";
-            await github.repos.updateRelease({ owner, repo, release_id, body });
+            await gh.repos.updateRelease({ owner, repo, release_id, body });
