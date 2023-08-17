@@ -29,22 +29,20 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-
+        
       - run: |
-          npm install @octokit/rest esm node-fetch
-
+          npm install @actions/github
+      
       - name: Edit Release
         uses: actions/github-script@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
-            require = require("esm")(module, { commonjs: true });
             const { owner, repo } = context.repo;
             const release_id = context.payload.release.id;
-            const { Octokit } = require("@octokit/rest");
-            const fetchImpl = require("node-fetch");
-            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN, request: { fetch: fetchImpl } });
-            const { data: release } = await octokit.repos.getRelease({ owner, repo, release_id });
+            const { GitHub } = require("@actions/github");
+            const github = new GitHub(process.env.GITHUB_TOKEN);
+            const { data: release } = await github.repos.getRelease({ owner, repo, release_id });
             const body = release.body + "\n\nAdd your new content here.";
-            await octokit.repos.updateRelease({ owner, repo, release_id, body });
+            await github.repos.updateRelease({ owner, repo, release_id, body });
