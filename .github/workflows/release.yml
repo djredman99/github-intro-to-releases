@@ -35,9 +35,9 @@ jobs:
         with:
           script: |
             // Log the release ID and repository information
-            console.log(The Release ID: *****)
+            console.log("The Release ID: *****")
             console.log(context.payload.release.id)
-            console.log(The Repo info: *****)
+            console.log("The Repo info: *****")
             console.log(context.repo)
 
       - name: Generate Release Notes
@@ -61,7 +61,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               release_id: context.payload.release.id,
-              body: context.payload.release.body + "\n\n" + data
+              body: context.payload.release.body + "\n\n" + data.join("\n")
             })
 
       - name: Build Release Assests
