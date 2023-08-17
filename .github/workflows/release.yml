@@ -31,7 +31,7 @@ jobs:
           node-version: '14'
 
       - run: |
-          npm install @octokit/rest node-fetch
+          npm install @octokit/rest esm node-fetch
 
       - name: Edit Release
         uses: actions/github-script@v4
@@ -39,6 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
+            require = require("esm")(module);
             const { owner, repo } = context.repo;
             const release_id = context.payload.release.id;
             const { Octokit } = require("@octokit/rest");
