@@ -7,7 +7,7 @@ The trigger for all of this could vary, but this repo is set up to have someone 
 1. Make code change
 2. Open PR
 3. Generate Release and set to draft
-4. Show that no assests are present
+4. Show that no assets are present
 5. Publish the draft
 6. Show workflow kicking off
 7. Show completed Release and Release Notes
