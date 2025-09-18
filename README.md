@@ -28,7 +28,6 @@ Anyone with read access to a repository can view and compare releases, but only 
 You can manually create release notes while managing a release. Alternatively, you can automatically generate release notes from a default template, or customize your own release notes template. For more information, see [Automatically generated release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes).
 
 
-
 I am adding more content to demonstrate release notes creation on release creation. I added this code change as a direct commit to main and no release note info was available.
 
 I will add content through PRs to show Release Note content.
