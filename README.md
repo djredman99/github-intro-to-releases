@@ -4,7 +4,7 @@ A repo to help demonstrate the use of releases and creating/updating from workfl
 The trigger for all of this could vary, but this repo is set up to have someone create a release (UI, API call, etc.) which will ick off a workflow that builds an applicaition (fictional in this repo), add comments/description to the release, and generate release notes.
 
 *DEMO SCENARIO*
-1. MAke code change
+1. Make code change
 2. Open PR
 3. Generate Release and set to draft
 4. Show that no assests are present
