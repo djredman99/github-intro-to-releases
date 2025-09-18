@@ -5,6 +5,9 @@ The trigger for all of this could vary, but this repo is set up to have someone 
 
 Additionally, but not being done currently, is moving the release from **Pre-release** to **Latest** upon successful completion of the workflow.
 
+*TO-DO*
+- Use a release.yml to show how to customize the release notes
+
 I am adding more content to demonstrate release notes creation on release creation. I added this code change as a direct commit to main and no release note info was available.
 
 I will add content through PRs to show Release Note content.
