@@ -1,7 +1,7 @@
 # Intro to Releases as a Workflow Trigger
 A repo to help demonstrate the use of releases and creating/updating from workflows
 
-The trigger for all of this could vary, but this repo is set up to have someone create a release (UI, API call, etc.) which will kick off a workflow that builds an applicaition (fictional in this repo), adds comments/description to the release, and generates release notes.
+The trigger for all of this could vary, but this repo is set up to have someone create a release (UI, API call, etc.) which will kick off a workflow that builds an application (fictional in this repo), adds comments/description to the release, and generates release notes.
 
 *DEMO SCENARIO*
 1. Make code change
